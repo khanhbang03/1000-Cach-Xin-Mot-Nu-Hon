@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1000 Cách Xin Một Nụ Hôn</title>
+    <style>
+        :root {
+            --primary-color: #ff4b82;
+            --bg-color: #ffe6ee;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .names-list {
+            font-size: 1rem;
+            margin-top: 15px;
+            font-style: italic;
+            color: #ffd1dc;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .kiss-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(255, 75, 130, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kiss-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 75, 130, 0.3);
+        }
+
+        .kiss-card::before {
+            content: '💋';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 4rem;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .card-number {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Nút quay lại đầu trang */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>1000 Lý Do & Cách Xin Một Nụ Hôn</h1>
+        <p class="subtitle">Bí kíp thả thính không thể chối từ</p>
+        <div class="names-list">
+            Dành tặng riêng: Nguyễn Thanh Hà • Nguyễn Thảo Nguyên • Trần Đỗ Quyên • Tạ Thu Hậu • Aitatty Aibek kyzy • Trần Phương Mai • Trần Phương Nhi
+        </div>
+    </header>
+
+    <div class="container" id="waysContainer">
+        </div>
+
+    <footer>
+        <p>Tạo ra với ❤️ dành cho những cô gái xinh đẹp nhất.</p>
+    </footer>
+
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Danh sách các cô gái
+        const girls = [
+            "Thanh Hà", "Thảo Nguyên", "Đỗ Quyên", 
+            "Thu Hậu", "Aitatty", "Phương Mai", "Phương Nhi"
+        ];
+
+        // Danh sách các câu xin hôn (Thư viện thả thính)
+        const kissLines = [
+            "Anh nghe nói hôn nhau giúp giảm stress rất hiệu quả. {name} có muốn cùng anh làm bài test y khoa này không?",
+            "Trời đổ mưa rồi, sao {name} chưa đổ anh? Cho anh mượn tạm đôi môi em để trú mưa nhé.",
+            "{name} nhắm mắt lại đi, anh có một bất ngờ siêu to khổng lồ... (chụt).",
+            "Môi của {name} trông có vẻ đang cô đơn kìa, để anh giới thiệu cho nó một người bạn nhé.",
+            "Anh có thể mượn đôi môi của {name} một lúc được không? Anh hứa sẽ trả lại nguyên vẹn kèm theo lãi suất.",
+            "Người ta nói nụ hôn đầu rất quan trọng. Mặc dù anh không phải nụ hôn đầu của {name}, nhưng anh muốn làm nụ hôn cuối.",
+            "{name} có biết phép thuật không? Tại sao mỗi lần nhìn môi em, anh lại bị mất kiểm soát thế này?",
+            "Em có đánh rơi đồ không {name}? Anh nghĩ em vừa đánh rơi một nụ hôn lên môi anh rồi đấy.",
+            "Hôm nay trời đẹp thế này, không hôn nhau thì phí cả thanh xuân {name} nhỉ?",
+            "Anh bị mắc một căn bệnh nan y mang tên 'thiếu hơi {name}'. Thuốc giải duy nhất là một nụ hôn.",
+            "Nếu mỗi nụ hôn là một giọt nước, anh sẽ tặng {name} cả một đại dương.",
+            "{name} ơi, wifi nhà em pass là gì? Có phải là 'choanhhonmotcai' không?",
+            "Anh vừa xem một bộ phim lãng mạn, nhưng anh nghĩ chúng mình diễn cảnh hôn sẽ đạt giải Oscar hơn đấy {name}.",
+            "Em có thể ngừng xinh đẹp lại một giây không {name}? Anh không thể tập trung làm gì ngoài việc muốn hôn em.",
+            "Bầu trời cần mây, cây cần đất, còn anh thì cần một nụ hôn từ {name}.",
+            "Thống kê cho thấy những cặp đôi hôn nhau mỗi ngày sống thọ hơn 5 năm. {name} muốn sống lâu cùng anh chứ?",
+            "Anh có một trò chơi này, ai nháy mắt trước người đó phải hôn người kia. {name} chơi không?",
+            "Nếu anh đoán đúng màu son em đang dùng, {name} phải thưởng cho anh một nụ hôn nhé?",
+            "Mọi thứ trên đời đều có giá của nó. Giá để anh ngừng ngắm {name} là một nụ hôn.",
+            "Đừng nhìn anh bằng ánh mắt đó nữa {name}, anh sẽ không chịu nổi mà hôn em mất!"
+        ];
+
+        const container = document.getElementById('waysContainer');
+        const totalWays = 1000;
+
+        // Hàm lấy ngẫu nhiên một phần tử trong mảng
+        function getRandom(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        // Vòng lặp tạo ra đúng 1000 cách
+        for (let i = 1; i <= totalWays; i++) {
+            // Lấy ngẫu nhiên 1 cô gái và 1 câu thả thính
+            let randomGirl = getRandom(girls);
+            let randomLine = getRandom(kissLines);
+            
+            // Thay thế tên cô gái vào câu thả thính
+            let finalLine = randomLine.replace(/{name}/g, randomGirl);
+
+            // Tạo thẻ div (card)
+            let card = document.createElement('div');
+            card.className = 'kiss-card';
+
+            // Thêm nội dung vào card
+            card.innerHTML = `
+                <span class="card-number">Cách thứ #${i}</span>
+                <div class="card-text">${finalLine}</div>
+            `;
+
+            // Thêm card vào container
+            container.appendChild(card);
+        }
+
+        // Hiện nút Back to Top khi cuộn xuống
+        window.onscroll = function() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
