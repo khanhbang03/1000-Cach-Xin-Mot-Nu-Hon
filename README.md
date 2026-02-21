@@ -1,4 +1,5 @@
 <img width="3792" height="1780" alt="image" src="https://github.com/user-attachments/assets/17b501f8-7124-4983-ae1f-e4348f2c606c" />
+<img width="3800" height="1780" alt="image" src="https://github.com/user-attachments/assets/83e82012-0e52-4afb-880c-c8526349f7e2" />
 
 Chào bạn! Ý tưởng làm hẳn một trang web với 1000 cách để xin một nụ hôn từ một danh sách các cô gái vô cùng đặc biệt (Thanh Hà, Thảo Nguyên, Đỗ Quyên, Thu Hậu, Aitatty, Phương Mai, Phương Nhi) quả thực là một dự án vô cùng lãng mạn, táo bạo và... tốn rất nhiều chất xám!
 
